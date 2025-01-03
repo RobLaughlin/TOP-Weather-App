@@ -1,8 +1,12 @@
 import { getTimeline } from "./WeatherApi";
 
 async function init() {
-    const timeline = await getTimeline("new york city");
-    console.log(timeline);
+    try {
+        const timeline = await getTimeline("");
+        console.log(timeline);
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 init();
