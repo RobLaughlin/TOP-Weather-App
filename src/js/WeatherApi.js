@@ -14,7 +14,15 @@ function buildQuery(location, unitGroup = "metric") {
     return `${TIMELINE_API}/${location}?${params.toString()}`;
 }
 
-export const getTimeline = (location, unitGroup = "metric") => {
+export const getTimeline = async (location, unitGroup = "metric") => {
     const query = buildQuery(location, unitGroup);
-    return query;
+
+    const headers = {
+        "Content-Type": "application/json",
+    };
+    const config = { headers };
+
+    const response = await fetch(query, config);
+    const result = await response.json();
+    return result;
 };
