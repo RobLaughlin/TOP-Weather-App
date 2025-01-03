@@ -6,12 +6,11 @@ async function weatherSearchBtnClicked(event) {
     const searchBar = form.querySelector("#WeatherSearchBar");
     const query = searchBar.value;
 
-    if (query === "") {
-        alert("Search bar must be non-empty.");
-        return;
-    }
-
     try {
+        if (query === "") {
+            throw new Error("Search bar must be non-empty.");
+        }
+
         const timeline = await getTimeline(query);
         console.log(timeline);
     } catch (err) {
