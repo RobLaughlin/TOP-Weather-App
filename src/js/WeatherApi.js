@@ -24,5 +24,11 @@ export const getTimeline = async (location, unitGroup = "metric") => {
 
     const response = await fetch(query, config);
     const result = await response.json();
-    return result;
+
+    return {
+        description: result.description,
+        resolvedAddress: result.resolvedAddress,
+        days: result.days,
+        currentConditions: result.currentConditions,
+    };
 };
