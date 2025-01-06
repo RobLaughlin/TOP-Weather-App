@@ -3,13 +3,13 @@
     border-radius: 4px;
     padding: 16px;
     display: grid;
-    grid-template-rows: 3fr 3fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr 2fr;
 }
 
 .weatherCard .description {
     margin-bottom: auto;
     font-family: "Roboto-Light", Arial, Helvetica, sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     text-align: center;
 }
 
@@ -27,7 +27,7 @@
 .weatherCard .tempContainer > span {
     width: 100%;
     font-family: "Roboto-Thin", Arial, Helvetica, sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.25vw;
 }
 
 .weatherCard .conditionsContainer {
@@ -41,7 +41,7 @@
 
 .weatherCard .conditionsContainer > span {
     font-family: "Roboto-Thin", Arial, Helvetica, sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     width: 100%;
 }
 
