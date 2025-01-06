@@ -78,7 +78,7 @@ button:hover {
 .weatherCardContainer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
+    gap: 16px;
     margin-bottom: 16px;
 }
 
@@ -86,4 +86,43 @@ button:hover {
     margin: auto;
     display: flex;
     width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .weatherCardContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .weatherCard {
+        grid-template-rows: 1fr 4fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .weatherCard .description {
+        grid-column: span 2;
+        font-size: 20px;
+    }
+
+    .weatherCard .conditionsContainer {
+        grid-column: span 2;
+    }
+
+    .weatherCard .icon {
+        margin-left: auto;
+    }
+
+    .weatherCard .tempContainer > span {
+        font-size: 20px;
+    }
+
+    .weatherCard .conditionsContainer > span {
+        font-size: 20px;
+    }
+
+    .weatherCard .conditionsContainer .date {
+        font-size: 18px;
+    }
 }
